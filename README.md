@@ -1,6 +1,9 @@
-# [postgresql-postgis-timescaledb](https://hub.docker.com/repository/docker/pikhovkin/postgresql-postgis-timescaledb)
+# postgresql-postgis-timescaledb
 
 [![build](https://github.com/pikhovkin/postgresql-postgis-timescaledb/workflows/build/badge.svg)](https://github.com/pikhovkin/postgresql-postgis-timescaledb/actions)
+<a href="https://hub.docker.com/repository/docker/pikhovkin/postgresql-postgis-timescaledb">
+    <img src="https://shields.io/docker/v/pikhovkin/postgresql-postgis-timescaledb?sort=semver&logo=docker" alt="DockerHub">
+</a>
 
 PostgreSQL + PostGIS + TimescaleDB ready-to-use docker image
 
