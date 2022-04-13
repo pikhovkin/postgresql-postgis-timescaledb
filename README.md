@@ -23,7 +23,7 @@ $ docker build -t pikhovkin/postgresql-postgis-timescaledb:latest .
 How to run:
 
 ```bash
-$ docker run -d --name postgres -e POSTGRES_PASSWORD=postgres pikhovkin/postgresql-postgis-timescaledb
+$ docker run -d -e POSTGRES_PASSWORD=postgres pikhovkin/postgresql-postgis-timescaledb
 ```
 
 ---
