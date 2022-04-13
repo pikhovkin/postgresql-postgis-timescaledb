@@ -4,6 +4,7 @@
 <a href="https://hub.docker.com/repository/docker/pikhovkin/postgresql-postgis-timescaledb">
     <img src="https://shields.io/docker/v/pikhovkin/postgresql-postgis-timescaledb?sort=semver&logo=docker" alt="DockerHub">
 </a>
+[https://img.shields.io/github/license/pikhovkin/postgresql-postgis-timescaledb](./LICENSE)
 
 PostgreSQL + PostGIS + TimescaleDB ready-to-use docker image
 
