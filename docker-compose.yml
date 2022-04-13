@@ -1,0 +1,36 @@
+version: "3"
+
+networks:
+  overlay:
+
+volumes:
+  pgts_data:
+    driver: local
+
+services:
+  pgts:
+    image: pikhovkin/postgresql-postgis-timescaledb:latest
+    restart: unless-stopped
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=${POSTGRES_HOST_AUTH_METHOD:-md5}
+      - POSTGRES_DB=${POSTGRES_DB:-postgres}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    ports:
+      - 5433:5432
+    networks:
+      - overlay
+    volumes:
+      - pgts_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    restart: unless-stopped
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    ports:
+      - 5433:80
+    networks:
+      - overlay

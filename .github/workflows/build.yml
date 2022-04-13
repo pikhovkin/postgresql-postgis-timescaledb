@@ -1,0 +1,24 @@
+name: build
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE_NAME: ${GITHUB_REPOSITORY:8}
+      TAG: ${GITHUB_REF:10}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Docker login
+        run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }}
+      - name: Build the Docker image
+        run: |
+          docker build -t pikhovkin/$IMAGE_NAME:$TAG .
+          docker build -t pikhovkin/$IMAGE_NAME:latest .
+      - name: Docker push
+        run: |
+          docker push pikhovkin/$IMAGE_NAME:$TAG
+          docker push pikhovkin/$IMAGE_NAME:latest
