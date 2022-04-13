@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       IMAGE_NAME: ${GITHUB_REPOSITORY:10}
-      TAG: ${GITHUB_REF:31}
+      TAG: ${GITHUB_REF:10}
     steps:
       - uses: actions/checkout@v2
       - name: Docker login
