@@ -33,3 +33,7 @@ PgAdmin will be available on [localhost:5433](http://localhost:5433) with creden
 ---
 
 Based on [binakot/postgresql-postgis-timescaledb](https://github.com/binakot/PostgreSQL-PostGIS-TimescaleDB).
+
+### License
+
+MIT
