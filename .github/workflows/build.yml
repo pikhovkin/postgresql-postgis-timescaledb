@@ -8,8 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: ${GITHUB_REPOSITORY:8}
-      TAG: ${GITHUB_REF:10}
+      IMAGE_NAME: ${GITHUB_REPOSITORY:10}
+      TAG: ${GITHUB_REF:31}
     steps:
       - uses: actions/checkout@v2
       - name: Docker login
